@@ -10,7 +10,7 @@ from tqdm import tqdm
 
 # commandline args
 argParser = argparse.ArgumentParser(description='Script to get install timings of pip packages.')
-argParser.add_argument('-r', '--requirments', help='requirments.txt file path', default='requirments.txt',type=str)
+argParser.add_argument('-r', '--requirments', help='requirments.txt file path', default='requirements.txt',type=str)
 argParser.add_argument('-f', '--force', action='store_true', help='force reinstall of the modules')
 
 args = argParser.parse_args()
