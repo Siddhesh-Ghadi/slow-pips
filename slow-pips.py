@@ -24,11 +24,11 @@ if args.force:
    pip3_cmd.append("--ignore-installed")
 
 if not os.path.isfile(args.requirments):
-   print('requirments.txt does not exist. Use -h for help.')
+   print('requirements.txt does not exist. Use -h for help.')
    sys.exit(1)
 
 # exit if pip3 doesn't exist
-pip3 = subprocess.run(["command", "-v", "pip3"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+pip3 = subprocess.run(["command", "-v", "pip3"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
 if pip3.returncode != 0:
     print("pip3 not found.")
     sys.exit(1)
